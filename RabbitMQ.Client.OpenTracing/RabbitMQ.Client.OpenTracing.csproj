@@ -5,18 +5,20 @@
         <AssemblyTitle>RabbitMQ Client Library OpenTracing extention for .NET</AssemblyTitle>
         <Authors>Nikita Gordeev</Authors>
         <Description>Extention of the official RabbitMQ .NET client library for C#. Added support of OpenTracing</Description>
-         <PackageProjectUrl>https://github.com/Nikituki/RabbitMQ.Client.OpenTracing</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/Nikituki/RabbitMQ.Client.OpenTracing</PackageProjectUrl>
         <PackageTags>rabbitmq, opentracing, tracing</PackageTags>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageOutputPath>..\packages</PackageOutputPath>
-        <Version>1.0.0-rc.1</Version>
+        <Version>1.0.0-rc.2</Version>
         <PackageId>RabbitMQ.Client.OpenTracing</PackageId>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="OpenTracing" Version="0.12.1" />
       <PackageReference Include="RabbitMQ.Client" Version="6.1.0-rc.2" />
+        <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
