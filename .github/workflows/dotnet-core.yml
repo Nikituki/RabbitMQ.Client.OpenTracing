@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: PushNuget
-      run: dotnet nuget push /packages/*.nupkg -k ${{secrets.NugetApiKey}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.NugetApiKey}} -s https://api.nuget.org/v3/index.json
