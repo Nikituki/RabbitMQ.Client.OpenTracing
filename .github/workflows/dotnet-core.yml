@@ -24,6 +24,6 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: PushToNugetOrg
-      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.NugetApiKey}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.NugetApiKey}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: PushToGithub
-      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.GITHUB_TOKEN}} -s https://nuget.pkg.github.com/Nikituki/index.json
+      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.GITHUB_TOKEN}} -s https://nuget.pkg.github.com/Nikituki/index.json --skip-duplicate
