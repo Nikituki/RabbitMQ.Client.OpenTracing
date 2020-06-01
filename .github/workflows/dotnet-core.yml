@@ -26,4 +26,4 @@ jobs:
     - name: PushToNugetOrg
       run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.NugetApiKey}} -s https://api.nuget.org/v3/index.json
     - name: PushToGithub
-      run: dotnet nuget push ./packages/*.nupkg --source "github"
+      run: dotnet nuget push ./packages/*.nupkg -k ${{secrets.GITHUB_TOKEN}} -s https://nuget.pkg.github.com/Nikituki/index.json
